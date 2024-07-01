@@ -10,6 +10,9 @@ Route::get('/', function () {
 
 require __DIR__.'/grupo_routes.php';
 require __DIR__.'/docente_routes.php';
+require __DIR__.'/estudiante_routes.php';
 require __DIR__.'/docente_grupos_routes.php';
+require __DIR__.'/estudiante_grupos_routes.php';
+
 
 
