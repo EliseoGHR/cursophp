@@ -165,6 +165,7 @@ class AsistenciaController extends Controller
 
         $grupoId = $estudianteGrupo->grupo_id;
 
+        date_default_timezone_set("America/El_Salvador");
         $fecha = Carbon::now()->toDateString();
         $horaEntrada = Carbon::now()->toTimeString();
 
