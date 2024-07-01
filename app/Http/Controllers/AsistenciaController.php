@@ -169,6 +169,14 @@ class AsistenciaController extends Controller
         $fecha = Carbon::now()->toDateString();
         $horaEntrada = Carbon::now()->toTimeString();
 
+        $asistenciaExistente = Asistencia::where('estudiante_id', $estudiante->id)
+            ->whereDate('fecha', $fecha)
+            ->first();
+
+        if ($asistenciaExistente) {
+            return redirect()->route('asistencias.index')->with('success', 'Ya se ha registrado la asistencia para este estudiante hoy');
+        }
+
         $asistencia = Asistencia::create([
             'grupo_id' => $grupoId,
             'estudiante_id' => $estudiante->id,

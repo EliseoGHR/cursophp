@@ -15,7 +15,7 @@ return new class extends Migration
             $table->increments('id');
             $table->integer('grupo_id')->unsigned();
             $table->integer('estudiante_id')->unsigned();
-            $table->date('fecha');
+            $table->date('fecha')->unique()->nullable(false);
             $table->time('hora_entrada');
 
             $table->foreign('grupo_id')->references('id')->on('grupo');
