@@ -12,7 +12,7 @@
 <div class="row">
     <div class="col-md-4">
         <label for="grupo_nombre" class="form-label">Grupo</label>
-        <input type="text" class="form-control" id="grupo_nombre" value="{{ $docenteGrupo->grupo->nombre }}" disabled>
+        <input type="text" class="form-control" id="grupo_nombre" value="{{ $estudianteGrupo->grupo->nombre }}" disabled>
     </div>
 </div>
 <br>
